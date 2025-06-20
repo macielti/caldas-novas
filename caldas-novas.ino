@@ -33,5 +33,7 @@ void loop() {
 
   useThermalPrinter(commands);
 
+  ackDocument(SERVER_NAME, document["id"]);
+
   ESP.restart();
 }

@@ -33,7 +33,10 @@ void useThermalPrinter(JSONVar commands) {
         }
       }
       tpDisconnect();
-      delay(10000);
+      delay(1000);
+    } else {
+      Serial.println(F("Printer not found. Restarting..."));
+      ESP.restart();
     }
   }
 }
